@@ -9,13 +9,11 @@ evenOddButton = document.getElementById('evenodd');
 function isPalindrome(word)
 {
     let wordReverse = "";
-    let j = word.length;
 
     // Creo la parola al contrario
-    for(let i = 0; i < word.length; i++)
+    for(let i = word.length; i >= 0; i--)
     {
-        wordReverse += word.substring(j - 1, j);
-        j--;
+        wordReverse += word.substring(i - 1, i);
     }
 
     // Verifico se la parola è palindroma o no
